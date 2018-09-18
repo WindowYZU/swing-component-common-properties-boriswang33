@@ -5,6 +5,7 @@
  */
 package lendle.courses.window_programming.componentproperties;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -33,14 +34,15 @@ public class PreferredSizeSample extends JPanel{
         JFrame frame=new JFrame();
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        //試試看改成 BorderLayout
-        frame.setLayout(new FlowLayout());
+        //試試看改成 
+        frame.setLayout(new BorderLayout());
         ////////////////////////
         
         for(int i=0; i<10; i++){
             PreferredSizeSample c=new PreferredSizeSample();
             //設定 preferredSize 為 50, 50 跟 100, 100 跟 150, 150
             //觀察看看
+            c.setPreferredSize(new Dimension(200,200));
             /////////////////////////////////////////////
             frame.add(c);
         }
